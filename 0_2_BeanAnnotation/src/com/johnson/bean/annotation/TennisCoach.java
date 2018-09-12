@@ -8,8 +8,19 @@ public class TennisCoach implements Coach {
 	
 	private Fortune fortune;
 
+////	@Autowired
+//	public TennisCoach(Fortune fortune) {
+//		this.fortune = fortune;
+//	}
+	
+	public TennisCoach() {
+		System.out.println("Inside Tennis Coach");
+	}
+
+	
 	@Autowired
-	public TennisCoach(Fortune fortune) {
+	public void setFortune(Fortune fortune) {
+		System.out.println("Inside setFortune");
 		this.fortune = fortune;
 	}
 	
