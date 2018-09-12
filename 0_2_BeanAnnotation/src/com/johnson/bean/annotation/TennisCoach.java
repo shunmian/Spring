@@ -19,7 +19,7 @@ public class TennisCoach implements Coach {
 
 	
 	@Autowired
-	public void setFortune(Fortune fortune) {
+	public void laugh(Fortune fortune) {
 		System.out.println("Inside setFortune");
 		this.fortune = fortune;
 	}
