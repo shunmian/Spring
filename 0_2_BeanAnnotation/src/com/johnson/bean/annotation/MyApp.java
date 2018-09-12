@@ -12,7 +12,9 @@ public class MyApp {
 		Coach coach = context.getBean("tennisCoach", Coach.class);
 		
 		System.out.println(coach.exercise());
-
+		
+		System.out.println(coach.getFortune());
+		
 	}
 
 }
