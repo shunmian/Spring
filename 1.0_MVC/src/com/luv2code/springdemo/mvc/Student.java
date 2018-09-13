@@ -14,6 +14,21 @@ public class Student {
 	
 	private LinkedHashMap<String, String> countryOptions;
 	
+	private String[] operationSystems;
+	
+	public String[] getOperationSystems() {
+		return operationSystems;
+	}
+
+	public void setOperationSystems(String[] operationSystems) {
+		this.operationSystems = operationSystems;
+		
+		for (String c : this.operationSystems) {
+			System.out.println(c);
+		}
+	
+	}
+
 	public Student() {
 		this.countryOptions = new LinkedHashMap<>();
 		
@@ -21,6 +36,7 @@ public class Student {
 		this.countryOptions.put("FR", "France");
 		this.countryOptions.put("GE", "Germany");
 		this.countryOptions.put("CN", "China");
+		
 	}
 	
 	public String getFirstName() {
