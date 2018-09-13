@@ -1,12 +1,15 @@
 package com.johnson.bean.annotation;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope("prototype")
+@Scope("singleton")
 public class TennisCoach implements Coach {
 	@Autowired
 	@Qualifier("happyFortune")
@@ -27,6 +30,16 @@ public class TennisCoach implements Coach {
 //		System.out.println("Inside setFortune");
 //		this.fortune = fortune;
 //	}
+	
+	@PostConstruct
+	public void doSomeInit() {
+		System.out.println("inside post init");
+	}
+	
+	@PreDestroy
+	public void doSomeClean() {
+		System.out.println("inside pre destroy");
+	}
 	
 	@Override
 	public String exercise() {
