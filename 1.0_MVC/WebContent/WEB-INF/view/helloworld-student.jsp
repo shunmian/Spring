@@ -8,6 +8,7 @@
 
 <body>
 	<h2>${param.studentName}</h2>
+	<h2>${message}</h2>
 </body>
 
 </html>
