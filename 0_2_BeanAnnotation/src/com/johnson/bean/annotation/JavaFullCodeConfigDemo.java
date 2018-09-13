@@ -9,11 +9,15 @@ public class JavaFullCodeConfigDemo {
 		
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SportConfig.class);
 		
-		Coach coach = context.getBean("swimCoach", Coach.class);
+		SwimCoach coach = context.getBean("swimCoach", SwimCoach.class);
 		
 		System.out.println(coach.exercise());
 		
 		System.out.println(coach.getFortune());
+		
+		System.out.println(coach.getEmail());
+		
+		System.out.println(coach.getTeam());
 		
 	}
 
