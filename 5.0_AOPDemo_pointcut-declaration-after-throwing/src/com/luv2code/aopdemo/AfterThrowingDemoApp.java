@@ -20,7 +20,7 @@ public class AfterThrowingDemoApp {
 		List<Account> theAccounts = null;
 				
 		try {
-			boolean shouldThrowExcpetion = true;
+			boolean shouldThrowExcpetion = false;
 			theAccounts = theAccountDAO.findAccounts(shouldThrowExcpetion);
 		} catch (Exception e) {
 			System.out.println("caught exception: " + e);
