@@ -17,12 +17,35 @@
 	<hr>
 	
 	<!-- display user name and role -->
+	<security:authorize access="hasRole('MANAGER')">
+		<p>
+			<a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a>
+			(Only for Manager peeps)
+		</p>
+	</security:authorize>
 	
+	<hr>
+	
+	<security:authorize access="hasRole('ADMIN')">
+	
+		<p>
+			<a href="${pageContext.request.contextPath}/systems">IT Systems Meeting</a>
+			(Only for Admin peeps)
+		</p>
+	
+	</security:authorize>
+	<hr>
 	<p>
 		User: <security:authentication property="principal.username" />
 		<br><br>
 		Role(s): <security:authentication property="principal.authorities" />
 	</p>
+	
+	<hr>
+	
+	
+	
+	
 	
 	<hr>
 	
